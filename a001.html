@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://licwx.tpri.org.cn/zlwx/informationPro.html?reqNo=B4200002023080300069 -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>省内大件许可查询</title>
+    <meta name="author" content="www.tpri.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="./2asserts/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+    <link href="./2asserts/mui.css" rel="stylesheet">
+    <link href="./2asserts/app.css" rel="stylesheet" type="text/css">
+    <link href="./2asserts/style.css" rel="stylesheet" type="text/css">
+    <script src="./2asserts/jquery.min.js"></script>
+    <script src="./2asserts/mui.min.js"></script>
+    <script src="./2asserts/mui.previewimage.js"></script>
+    <script src="./2asserts/mui.zoom.js"></script>
+    <script src="./2asserts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./2asserts/jquery.qrcode.min.js"></script>
+    <script src="./2asserts/ajax.js" charset="UTF-8"></script>
+    <script src="./2asserts/informationPro.js" charset="UTF-8"></script>
+    <script src="./2asserts/jweixin-1.4.0.js" type="text/javascript"></script>
+</head>
+
+<body style="">
+    <div data-role="page">
+        <input id="reqNoHidden" type="hidden" value="B4200002023080300069">
+        <input id="status" type="hidden" value="">
+
+        <div data-role="header" data-position="fixed" data-theme="a" style="background-color: #18558D">
+
+            <h1></h1>
+        </div>
+        <div id="msg"
+            style="position: fixed; width: 50%; height: 40px; top: 50%; left: 25%; margin-top: -15px; padding: 6px; z-index: 3; font-size: 30px; color: rgb(255, 102, 51); text-align: center; transform: rotate(20deg); display: block; border: 2px solid rgb(255, 102, 51); font-family: monospace;">
+            此证有效
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-divider-theme="a">
+                <!-- <li id="box_qrcode"><div class="detail-name detail-name-blod ">通行证二维码：</div>
+                    <div class="detail-value detail-name-blod" style="height: 220px;">
+                  <div id="qrcode">
+                    <div id="codeico">
+                        <img src="images/favicon.png" width="40" />
+                    </div>
+                  </div></div></li>       -->
+                <li data-role="list-divider" class="category-title">基本信息</li> <!-- 基本信息 -->
+                <li>
+                    <div class="detail-name detail-name-blod ">超限运输许可证号：</div>
+                    <div class="detail-value " id="reqNo">B4200002023080300069</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">有效范围：</div>
+                    <div class="detail-value " id="passDists">湖北省</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod ">通行日期：</div>
+                    <div class="detail-value " id="passDate">2023-08-03至2023-08-06</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod ">通行次数：</div>
+                    <div class="detail-value " id="passCount">单次</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">通行路线：</div>
+                    <div class="detail-value " id="roads">
+                        <br>荆门-荆州,鸿发物流-培公大道-荆门收费站-G55二广高速-章庄铺收费站-集贸南路-章庄铺小学。(审批路线不含城市道路)</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">承运单位：</div>
+                    <div class="detail-value " id="certName">武汉盛世恒通物流有限公司</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">经营许可证号：</div>
+                    <div class="detail-value " id="orgCertNo"> 42****0682</div>
+                </li>
+
+
+                <li data-role="list-divider" class="category-title">货物信息</li> <!-- 货物信息 -->
+                <li>
+                    <div class="detail-name detail-name-blod">货物名称：</div>
+                    <div class="detail-value " id="cargoInfo">钢结构（钢板）</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">货物重量：</div>
+                    <div class="detail-value " id="cargoWeight">35.00吨</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">货物外廓尺寸(米)：</div>
+                    <div class="detail-value " id="cargoOutline">24.00 × 3.50 × 4.50</div>
+                </li>
+
+                <li data-role="list-divider" class="category-title">车辆信息</li> <!-- 车辆信息 -->
+                <li>
+                    <div class="detail-name detail-name-blod">牵引车车号牌：</div>
+                    <div class="detail-value" id="vehicleNo">冀EX2212</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">牵引车厂牌型号：</div>
+                    <div class="detail-value" id="model">陕汽牌</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">牵引车整备质量：</div>
+                    <div class="detail-value" id="vehWeight">15.00吨</div>
+                </li>
+                <li class="han-veh">
+                    <div class="detail-name detail-name-blod">挂车车号牌：</div>
+                    <div class="detail-value" id="hanvehicleNo">冀E12GU挂</div>
+                </li>
+                <li class="han-veh">
+                    <div class="detail-name detail-name-blod">挂车厂牌型号：</div>
+                    <div class="detail-value" id="hanmodel">鲁俊达牌</div>
+                </li>
+                <li class="han-veh">
+                    <div class="detail-name detail-name-blod">挂车整备质量：</div>
+                    <div class="detail-value " id="hanvehWeight">8.20吨</div>
+                </li>
+
+                <li data-role="list-divider" class="category-title">车货总体信息</li> <!-- 车货总体信息 -->
+                <li>
+                    <div class="detail-name detail-name-blod">车货总重量：</div>
+                    <div class="detail-value " id="totalWeight">50.00吨</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">车货外廓尺寸(米)：</div>
+                    <div class="detail-value " id="totalOutline">24.00 × 3.50 × 4.50</div>
+                </li>
+                <li>
+                    <div class="detail-name detail-name-blod">轴荷分布：</div>
+                    <div class="detail-value " id="axlesLoad">10+20+20</div>
+                </li>
+            </ul>
+        </div>
+        <div style=" margin: 10px auto;border-top: 1px  black; position: relative; text-align: center;">
+            <span style="display:inline-block;  width:100%; border-top:2px solid #62b5de; vertical-align:5px; "></span>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Information.initEvent();
+                Information.loadInformationData();
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
