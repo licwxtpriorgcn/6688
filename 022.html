@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="http://licwx.tpri.org.cn/zlwx/information.html?reqNo=A4400002019121800413&amp;status=52">--><base href=".">
+<title>全国大件运输许可查询系统</title>
+<meta name="author" content="www.tpri.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.png">
+<link href="./assets/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="./assets/mui.css" rel="stylesheet">
+<link href="./assets/app.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+#qrcode {
+    position: absolute;
+    top: 30px;
+    padding: 10px;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+}
+#box_qrcode{
+    display: none;
+}
+#pro{
+    font-weight: bold;
+}
+#codeico {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    //background: url(./images/favicon.png) no-repeat;
+    //background-size:24px 24px;
+}
+</style>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a mui-wechat mui-wechat-7 mui-wechat-7-0 mui-wechat-7-0-5">
+    <div data-role="page" data-url="/zlwx/information.html?reqNo=A4400002019121800413&amp;status=52" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-active" style="padding-top: 26px;">
+        <input id="reqNoHidden" type="hidden" value="A4400002019121800413">
+        <input id="status" type="hidden" value="52">
+        <div data-role="header" data-position="fixed" data-theme="a" style="background-color: #18558D" role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown">
+            
+            <h1 class="ui-title" role="heading" aria-level="1"></h1>
+        </div>        
+        
+         <div id="msg" style="position: fixed;width: 50%;height: 40px;top: 50%;left: 25%;margin-top: -15px;padding: 6px;z-index: 3;font-size: 30px;color: #ff6633;text-align: center;display: block;transform: rotate(20deg);display: none;border: 2px solid #ff6633;
+    	font-family: monospace;">
+                        此证有效           
+        </div>
+        <div id="msg1" style="position: fixed; width: 50%; height: 40px; top: 50%; left: 25%; margin-top: -15px; padding: 6px; z-index: 3; font-size: 30px; color: rgb(255, 102, 51); text-align: center; transform: rotate(20deg); display: block; border: 2px solid rgb(255, 102, 51); font-family: monospace;">
+                       此证有效           
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-divider-theme="a" class="ui-listview">                
+                <li id="box_qrcode" class="ui-li-static ui-body-inherit ui-first-child" style="display: list-item;">
+                    <div class="detail-name detail-name-blod ">通行证二维码：</div>
+                    <div class="detail-value detail-name-blod" style="height: 220px;">
+                        <div id="qrcode" style="left: 86px;">
+                            <div id="codeico">
+                                <img src="./favicon.png" width="40">
+                            </div>
+                            <img src="./qrcode022.png" width="180" height="180">
+                            <!-- <canvas width="180" height="180"></canvas> -->
+                        </div>
+                    </div>
+                </li>
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">基本信息</li>  <!-- 基本信息 -->              
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">超限运输许可证号：</div>
+                    <div class="detail-value " id="reqNo">A4400002024031223566</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">有效范围：</div>
+				<div class="detail-value " id="passDists">内蒙古自治区，山西省</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">通行时间：</div>
+                    <div class="detail-value " id="passDate">2024年03月13日19时35分至 2024年03月20日23时59分</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">通行次数：</div>
+                    <div class="detail-value " id="passCount">单次</div></li>    
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">通行路线：</div>
+				<div class="detail-value " id="roads"><br><span id="pro">内蒙古自治区</span>:大饭铺村退役军人服务站--G109--大饭铺收费站--S31呼准高速--蒙晋界；<br><hr><span id="pro">山西省</span>:晋蒙界--S31呼准高速--S40灵河高速--G55二广高速--G5京昆高速--S45天黎高速--昔阳收费站<br><hr></div></li>
+                    <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">承运单位：</div>
+                    <div class="detail-value " id="certName">乔金友</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">经营许可证号：</div>
+                    <div class="detail-value " id="orgCertNo">130501302080</div></li>
+                    
+                    
+                    
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">经营许可证有效期：</div>
+                    <div class="detail-value " id="periodDate">2021-07-27 至 2025-07-26</div></li>
+                    
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">货物信息</li> <!-- 货物信息 -->
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物名称：</div>
+                    <div class="detail-value " id="cargoInfo">宽体翻斗</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物重量：</div>
+                    <div class="detail-value " id="cargoWeight">43.00吨</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物外廓尺寸(米)：</div>
+                    <div class="detail-value " id="cargoOutline">14.00 × 3.75 ×3.60</div></li>
+                    
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">车辆信息</li> <!-- 车辆信息 -->
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车车号牌：</div>
+                    <div class="detail-value" id="vehicleNo">冀E4591Z</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车厂牌型号：</div>
+                    <div class="detail-value" id="model">CA4250P66K24TA1</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车整备质量：</div>
+                    <div class="detail-value" id="vehWeight">8.80吨</div></li>                
+                <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车车号牌：</div>
+                    <div class="detail-value" id="hanvehicleNo">鲁H6RT2挂</div></li>
+                <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车厂牌型号：</div>
+                    <div class="detail-value" id="hanmodel">LWY9402TDP</div></li>
+                <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车整备质量：</div>
+                    <div class="detail-value " id="hanvehWeight">8.20吨</div></li>
+                
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">车货总体信息</li> <!-- 车货总体信息 -->
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">车货总重量：</div>
+                    <div class="detail-value " id="totalWeight">60.00吨</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">车货外廓尺寸(米)：</div>
+                    <div class="detail-value " id="totalOutline">24.00 × 3.75× 4.50</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">轴荷分布：</div>
+                    <div class="detail-value " id="axlesLoad">10+20+30</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class=" detail-name-blod">车货总体轮廓图：</div>
+                    <div class="detail-image detail-value" id="totalImgs">无</div></li>
+                
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">备注</li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-value " id="bz">同意通行。</div></li>
+                    
+                <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">其他信息</li> <!-- 其他信息 -->
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">通行意见：</div>
+				<div class="detail-value " id="passOpinion"><br>内蒙古自治区：<br>交通部门意见:同意通行！ <br>公安部门意见:同意通行！<br><hr>山西省：<br>交通部门意见:同意通行！<br>公安部门意见:暂无！<br><hr></div></li>                
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name-blod">护送方案：</div>
+                    <div class="detail-image detail-value" id="planfile">无</div></li> 
+                <li class="ui-li-static ui-body-inherit ui-last-child"><div class="detail-name-blod">运输计划：</div>
+                    <div class="detail-image detail-value" id="transportplan">无</div></li> 
+            </ul>
+        </div>
+        <div style=" margin: 10px auto;border-top: 1px  black; position: relative; text-align: center;">
+            <span style="display:inline-block;  width:100%; border-top:2px solid #62b5de; vertical-align:5px; "></span>                
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                Information.loadInformationData();
+            });
+        </script>
+    </div>
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div></body></html>
