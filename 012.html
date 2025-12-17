@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="http://licwx.tpri.org.cn/zlwx/information.html?reqNo=A4400002019121800413&amp;status=52">--><base href=".">
-<title>许可信息</title>
+<title>全国大件运输许可查询系统</title>
 <meta name="author" content="www.tpri.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1,maximum-scale=1, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,28 +47,47 @@
     <div data-role="page" data-url="/zlwx/information.html?reqNo=A4400002019121800413&amp;status=52" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-active" style="padding-top: 26px;">
         <input id="reqNoHidden" type="hidden" value="A4400002019121800413">
         <input id="status" type="hidden" value="52">
-         <div id="msg" style="position: fixed;width: 50%;height: 40px;top: 50%;left: 25%;margin-top: -15px;padding: 6px;z-index: 3;font-size: 30px;color: #ff6633;text-align: center;display: block;transform: rotate(-20deg);display: none;border: 2px solid #ff6633;
+        <div data-role="header" data-position="fixed" data-theme="a" style="background-color: #18558D" role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown">
+            
+            <h1 class="ui-title" role="heading" aria-level="1"></h1>
+        </div>        
+        
+         <div id="msg" style="position: fixed;width: 50%;height: 40px;top: 50%;left: 25%;margin-top: -15px;padding: 6px;z-index: 3;font-size: 30px;color: #ff6633;text-align: center;display: block;transform: rotate(20deg);display: none;border: 2px solid #ff6633;
     	font-family: monospace;">
-                        当前有效           
+                        此证有效           
         </div>
-        <div id="msg1" style="position: fixed; width: 50%; height: 40px; top: 50%; left: 25%; margin-top: -15px; padding: 6px; z-index: 3; font-size: 30px; color: rgb(255, 102, 51); text-align: center; transform: rotate(-20deg); display: block; border: 2px solid rgb(255, 102, 51); font-family: monospace;">
-                       当前有效           
+        <div id="msg1" style="position: fixed; width: 50%; height: 40px; top: 50%; left: 25%; margin-top: -15px; padding: 6px; z-index: 3; font-size: 30px; color: rgb(255, 102, 51); text-align: center; transform: rotate(20deg); display: block; border: 2px solid rgb(255, 102, 51); font-family: monospace;">
+                       此证有效           
         </div>
         <div role="main" class="ui-content">
             <ul data-role="listview" data-divider-theme="a" class="ui-listview">                
+                <li id="box_qrcode" class="ui-li-static ui-body-inherit ui-first-child" style="display: list-item;">
+                    <div class="detail-name detail-name-blod ">通行证二维码：</div>
+                    <div class="detail-value detail-name-blod" style="height: 220px;">
+                        <div id="qrcode" style="left: 86px;">
+                            <div id="codeico">
+                                <img src="./favicon.png" width="40">
+                            </div>
+                            <img src="./qrcode012.png" width="180" height="180">
+                            <!-- <canvas width="180" height="180"></canvas> -->
+                        </div>
+                    </div>
+                </li>
                 <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">基本信息</li>  <!-- 基本信息 -->              
-                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">许可证号：</div>
-                    <div class="detail-value " id="reqNo">A4300002024080639860【2类件】</div></li>
+                <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">超限运输许可证号：</div>
+                    <div class="detail-value " id="reqNo">A1500002025121611354</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">有效范围：</div>
-				<div class="detail-value " id="passDists">湖南省，贵州省</div></li>
+				<div class="detail-value " id="passDists">内蒙古自治区，山西省</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">通行时间：</div>
-                    <div class="detail-value " id="passDate">2024年08月07日10时55分至 2024年08月21日23时59分</div></li>
+                    <div class="detail-value " id="passDate">2025年12月17日16时06分至 2025年12月30日23时59分</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod ">通行次数：</div>
                     <div class="detail-value " id="passCount">单次</div></li>    
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">通行路线：</div>
-				<div class="detail-value " id="roads"><br><span id="pro">湖南省</span>:金洲收费站--G5513长张高速--G0421许广高速--S50长芷高速--S58芷铜高速--湘黔界<br><hr><span id="pro">贵州省</span>:黔湘界--S71铜怀高速--G56杭瑞高速--S15松从高速--G60沪昆高速--三穗收费站<br><hr></div></li>
+				<div class="detail-value " id="roads"><br>
+<span id="pro">内蒙古自治区</span>:绿康源生态农业园--G512--丰镇收费站--G55二广高速--蒙晋界；<br><hr>
+<span id="pro">山西省</span>:晋蒙界--G55二广高速--马连庄收费站<br><hr></div></li>
                     <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">承运单位：</div>
-                    <div class="detail-value " id="certName">焦玉海</div></li>
+                    <div class="detail-value " id="certName">邢台程玖汽车贸易有限公司</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">经营许可证号：</div>
                     <div class="detail-value " id="orgCertNo">130501302080</div></li>
                     
@@ -79,33 +98,33 @@
                     
                 <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">货物信息</li> <!-- 货物信息 -->
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物名称：</div>
-                    <div class="detail-value " id="cargoInfo">齿轮箱1件</div></li>
+                    <div class="detail-value " id="cargoInfo">电缆盘4个</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物重量：</div>
-                    <div class="detail-value " id="cargoWeight">53.00吨</div></li>
+                    <div class="detail-value " id="cargoWeight">32.00吨</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">货物外廓尺寸(米)：</div>
-                    <div class="detail-value " id="cargoOutline">10.00 × 3.75 ×4.50</div></li>
+                    <div class="detail-value " id="cargoOutline">15.00 × 3.75×3.60</div></li>
                     
                 <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">车辆信息</li> <!-- 车辆信息 -->
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车车号牌：</div>
-                    <div class="detail-value" id="vehicleNo">冀E2792Z</div></li>
+                    <div class="detail-value" id="vehicleNo">冀E8784X</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车厂牌型号：</div>
-                    <div class="detail-value" id="model">CA4250P66K24TA1</div></li>
+                    <div class="detail-value" id="model">陕汽牌SX4250XC4Q3</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">牵引车整备质量：</div>
                     <div class="detail-value" id="vehWeight">8.80吨</div></li>                
                 <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车车号牌：</div>
-                    <div class="detail-value" id="hanvehicleNo">冀E57CF挂</div></li>
+                    <div class="detail-value" id="hanvehicleNo">冀E764T挂</div></li>
                 <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车厂牌型号：</div>
-                    <div class="detail-value" id="hanmodel">LWY9402TDP</div></li>
+                    <div class="detail-value" id="hanmodel">利源达牌LWY9387TDP</div></li>
                 <li class="han-veh ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">挂车整备质量：</div>
                     <div class="detail-value " id="hanvehWeight">8.20吨</div></li>
                 
                 <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">车货总体信息</li> <!-- 车货总体信息 -->
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">车货总重量：</div>
-                    <div class="detail-value " id="totalWeight">70.00吨</div></li>
+                    <div class="detail-value " id="totalWeight">49.00吨</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">车货外廓尺寸(米)：</div>
-                    <div class="detail-value " id="totalOutline">21.00 × 3.75× 4.50</div></li>
+                    <div class="detail-value " id="totalOutline">27.00 × 3.75× 4.50</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">轴荷分布：</div>
-                    <div class="detail-value " id="axlesLoad">10+20+3*18</div></li>
+                    <div class="detail-value " id="axlesLoad">10+20+30</div></li>
                 <li class="ui-li-static ui-body-inherit"><div class=" detail-name-blod">车货总体轮廓图：</div>
                     <div class="detail-image detail-value" id="totalImgs">无</div></li>
                 
@@ -114,7 +133,9 @@
                     
                 <li data-role="list-divider" class="category-title ui-li-divider ui-bar-a" role="heading">其他信息</li> <!-- 其他信息 -->
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name detail-name-blod">通行意见：</div>
-				<div class="detail-value " id="passOpinion"><br>湖南省：<br>交通部门意见:同意通行！ <br>公安部门意见:同意通行！<br><hr>贵州省：<br>交通部门意见:同意通行！<br>公安部门意见:暂无！<br><hr></div></li>                
+				<div class="detail-value " id="passOpinion"><br>
+内蒙古自治区：<br>交通部门意见:同意通行！ <br>公安部门意见:暂无！<br><hr>
+山西省：<br>交通部门意见:同意通行！<br>公安部门意见:暂无！<br><hr></div></li>                
                 <li class="ui-li-static ui-body-inherit"><div class="detail-name-blod">护送方案：</div>
                     <div class="detail-image detail-value" id="planfile">无</div></li> 
                 <li class="ui-li-static ui-body-inherit ui-last-child"><div class="detail-name-blod">运输计划：</div>
